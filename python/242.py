@@ -21,6 +21,9 @@ s and t consist of lowercase English letters.
 Follow up: What if the inputs contain Unicode characters? How would you adapt your solution to such a case?
 """
 
+from collections import Counter
+
+
 class Solution:
     """
     T-O(n)
@@ -78,9 +81,15 @@ class Solution2:
             return True
 
 
+class Solution3:
+    """
+    One line
+    """
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t)
 
 
-for sol in Solution2, Solution1, Solution:
+for sol in Solution3, Solution2, Solution1, Solution:
     assert sol().isAnagram("anagram", "nagaram") == True
     assert sol().isAnagram("anagram", "nagaram") == True
     assert sol().isAnagram("rat", "cat") == False
