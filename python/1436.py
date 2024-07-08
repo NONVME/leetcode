@@ -69,3 +69,4 @@ for sol in Solution1, Solution:
     assert sol().destCity([["London","New York"],["New York","Lima"],["Lima","Sao Paulo"]]) == "Sao Paulo"
     assert sol().destCity([["B","C"],["D","B"],["C","A"]]) == "A"
     assert sol().destCity([["A","Z"]]) == "Z"
+
